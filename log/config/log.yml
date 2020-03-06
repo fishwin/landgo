@@ -1,0 +1,4 @@
+encoding: console
+output_paths:
+  - stdout
+level: debug

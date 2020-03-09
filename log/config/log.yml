@@ -1,4 +1,6 @@
-encoding: console
-output_paths:
-  - stdout
 level: debug
+encoding: json
+disableStacktrace: false
+outputPaths:
+  - stdout
+  - ./output.log

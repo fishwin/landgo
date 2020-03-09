@@ -1,4 +1,4 @@
-module landgo
+module github.com/fishwin/landgo
 
 go 1.14
 

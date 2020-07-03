@@ -23,10 +23,10 @@ package leetcode
  * }
  */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+//type ListNode struct {
+//	Val  int
+//	Next *ListNode
+//}
 
 // 头结点原地不动，不断的将后面的元素扔到头部
 func reverseList(head *ListNode) *ListNode {

@@ -1,45 +1,40 @@
 package sort
 
-func MergeSort(src []int) []int {
-	if len(src) <= 1 {
-		return src
+func MergeSort(nums []int) []int {
+	if len(nums) <= 1 {
+		return nums
 	}
 
-	return mergeSort(src, 0, len(src) - 1)
+	mid := len(nums) / 2
+	return merge(MergeSort(nums[:mid]), MergeSort(nums[mid:]))
 }
 
-func mergeSort(src []int, left int, right int) []int {
-	if left == right {
-		return []int{src[left]}
+func merge(nums1 []int, nums2 []int) []int {
+	if len(nums1) <= 0 {
+		return nums2
 	}
-	mid := (left + right) / 2
-	ret1 := mergeSort(src, left, mid)
-	ret2 := mergeSort(src, mid+1, right)
-	return merge(ret1, ret2)
-}
+	if len(nums2) <= 0 {
+		return nums1
+	}
 
-func merge(ret1 []int, ret2 []int) []int {
 	var ret []int
-
-	i, j := 0, 0
-	for i < len(ret1) && j < len(ret2) {
-		if ret1[i] < ret2[j] {
-			ret = append(ret, ret1[i])
-			i++
+	p1 := 0
+	p2 := 0
+	for p1 < len(nums1) && p2 < len(nums2) {
+		if nums1[p1] < nums2[p2] {
+			ret = append(ret, nums1[p1])
+			p1++
 		} else {
-			ret = append(ret, ret2[j])
-			j++
+			ret = append(ret, nums2[p2])
+			p2++
 		}
 	}
 
-	if i == len(ret1) && j < len(ret2) {
-		for ; j < len(ret2);j++ {
-			ret = append(ret, ret2[j])
-		}
-	} else if j == len(ret2) && i < len(ret1) {
-		for ; i < len(ret1);i++ {
-			ret = append(ret, ret1[i])
-		}
+	if p1 != len(nums1) {
+		ret = append(ret, nums1[p1:]...)
+	}
+	if p2 != len(nums2) {
+		ret = append(ret, nums2[p2:]...)
 	}
 
 	return ret

@@ -24,7 +24,7 @@ func _quickSort(nums []int, left, right int) {
 	_quickSort(nums, resetIndex+1, right)
 }
 
-func quickSort(nums []int) {
+func QuickSort(nums []int) {
 	if len(nums) <= 1 {
 		return
 	}

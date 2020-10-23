@@ -1,10 +1,12 @@
 package leetcode
 
-//剑指 Offer 32 - II. 从上到下打印二叉树 II
-//从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。
-
-//例如:
-//给定二叉树: [3,9,20,null,null,15,7],
+//102. 二叉树的层序遍历
+//给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
+//
+//
+//
+//示例：
+//二叉树：[3,9,20,null,null,15,7],
 //
 //3
 /// \
@@ -18,33 +20,22 @@ package leetcode
 //[9,20],
 //[15,7]
 //]
-//
-//
-//提示：
-//
-//节点总数 <= 1000
 
 func levelOrderCore(root *TreeNode, level int, ret *[][]int) {
 	if root == nil {
 		return
 	}
-
-	if len(*ret) <= level { // 如果ret中还未初始化当前行
-		*ret = append(*ret, []int{root.Val})
-	} else {
-		(*ret)[level] = append((*ret)[level], root.Val)
+	if len(*ret) < level {
+		*ret = append(*ret, []int{})
 	}
-
-	levelOrderCore(root.Left, level + 1, ret)
-	levelOrderCore(root.Right, level + 1, ret)
+	(*ret)[level-1] = append((*ret)[level-1], root.Val)
+	levelOrderCore(root.Left, level+1, ret)
+	levelOrderCore(root.Right, level+1, ret)
 }
 
+// 记录层数
 func levelOrder(root *TreeNode) [][]int {
 	var ret [][]int
-	if root == nil {
-		return ret
-	}
-
-	levelOrderCore(root, 0, &ret)
+	levelOrderCore(root, 1, &ret)
 	return ret
 }

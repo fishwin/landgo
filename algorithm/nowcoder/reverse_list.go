@@ -23,8 +23,6 @@ func ReverseList(pHead *ListNode) *ListNode {
 
 	fmt.Println("test")
 
-	
-
 	// 第一个节点不动，不断的将其后的节点放到头部
 	for p.Next != nil {
 		temp = p.Next // 指向将要移到头部的节点

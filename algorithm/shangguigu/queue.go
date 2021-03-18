@@ -17,7 +17,7 @@ func NewQueue(length int) *Queue {
 		head: 0,
 		tail: 0,
 	}
-	fmt.Println("test111"               )
+	fmt.Println("test111")
 
 	return q
 }

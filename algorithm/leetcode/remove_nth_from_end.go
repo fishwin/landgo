@@ -1,6 +1,5 @@
 package leetcode
 
-
 //19. 删除链表的倒数第N个节点
 //给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
 //
@@ -16,8 +15,6 @@ package leetcode
 //进阶：
 //
 //你能尝试使用一趟扫描实现吗？
-
-
 
 func core2(head *ListNode, n int) (h *ListNode, reverseN int, remove bool) {
 	if head.Next == nil {
@@ -37,10 +34,10 @@ func core2(head *ListNode, n int) (h *ListNode, reverseN int, remove bool) {
 }
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	if head == nil || (head.Next == nil && n == 1){
+	if head == nil || (head.Next == nil && n == 1) {
 		return nil
 	}
-	_,_, remove := core2(head, n)
+	_, _, remove := core2(head, n)
 	if !remove {
 		return head.Next
 	}

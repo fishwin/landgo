@@ -19,7 +19,6 @@ package leetcode
 //[3]
 //]
 
-
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -43,8 +42,8 @@ func _core(root *TreeNode, level int, ret *[][]int) {
 
 func reverse(ret *[][]int) {
 	n := len(*ret)
-	for i := 0 ; i < n / 2; i++ {
-		(*ret)[i], (*ret)[n-i-1] =  (*ret)[n-i-1],(*ret)[i]
+	for i := 0; i < n/2; i++ {
+		(*ret)[i], (*ret)[n-i-1] = (*ret)[n-i-1], (*ret)[i]
 	}
 }
 

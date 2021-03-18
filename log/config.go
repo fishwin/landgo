@@ -26,8 +26,6 @@ type config struct {
 	OutputPaths []string `json:"outputPaths" yaml:"outputPaths"`
 }
 
-
-
 // init yaml config file
 func InitWithFile(filePath string) (err error) {
 	by, err := ioutil.ReadFile(filePath)

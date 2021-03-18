@@ -25,7 +25,7 @@ package leetcode
 func maxValue(grid [][]int) int {
 	for i := 0; i < len(grid); i++ {
 		for j := 0; j < len(grid[i]); j++ {
-			if i ==0 && j == 0 {
+			if i == 0 && j == 0 {
 				continue
 			} else if i == 0 && j > 0 {
 				grid[i][j] = grid[i][j-1] + grid[i][j]

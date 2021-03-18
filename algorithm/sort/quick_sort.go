@@ -11,7 +11,7 @@ func reset(nums []int, left, right int) int {
 	}
 
 	// 基准值复位
-	nums[p - 1], nums[ref] = nums[ref], nums[p - 1]
+	nums[p-1], nums[ref] = nums[ref], nums[p-1]
 	return p - 1
 }
 

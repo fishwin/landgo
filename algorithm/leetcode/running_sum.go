@@ -19,17 +19,16 @@ package leetcode
 //
 //输入：nums = [3,1,2,10,1]
 //输出：[3,4,6,16,17]
-// 
+//
 //
 //提示：
 //
 //1 <= nums.length <= 1000
 //-10^6 <= nums[i] <= 10^6
 
-
 func runningSum(nums []int) []int {
 	temp := 0
-	for i := 0; i < len(nums);i++ {
+	for i := 0; i < len(nums); i++ {
 		temp += nums[i]
 		nums[i] = temp
 	}

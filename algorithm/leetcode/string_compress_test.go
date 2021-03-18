@@ -12,18 +12,18 @@ func Test_compressString(t *testing.T) {
 		want string
 	}{
 		{
-			name:"test 1",
-			args:args{S:"aabcccccaaa"},
+			name: "test 1",
+			args: args{S: "aabcccccaaa"},
 			want: "a2b1c5a3",
 		},
 		{
-			name:"test 2",
-			args:args{S:"abbccd"},
+			name: "test 2",
+			args: args{S: "abbccd"},
 			want: "abbccd",
 		},
 		{
-			name:"test 3",
-			args:args{S:"bb"},
+			name: "test 3",
+			args: args{S: "bb"},
 			want: "bb",
 		},
 	}

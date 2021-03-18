@@ -30,7 +30,6 @@ import (
 //输入: "ZY"
 //输出: 701
 
-
 func titleToNumber(s string) int {
 	sm := make(map[byte]int)
 
@@ -43,8 +42,8 @@ func titleToNumber(s string) int {
 	// 26进制
 	mi := 0
 	ret := 0
-	for i := len(s)-1; i >= 0; i-- {
-		ret  += sm[s[i]] * int(math.Pow(26, float64(mi)))
+	for i := len(s) - 1; i >= 0; i-- {
+		ret += sm[s[i]] * int(math.Pow(26, float64(mi)))
 		mi++
 	}
 

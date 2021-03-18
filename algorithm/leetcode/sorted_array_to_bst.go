@@ -18,8 +18,8 @@ package leetcode
 //-10  5
 
 type TreeNode struct {
-	Val int
-	Left *TreeNode
+	Val   int
+	Left  *TreeNode
 	Right *TreeNode
 }
 

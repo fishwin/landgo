@@ -20,7 +20,6 @@ func TestLogger(t *testing.T) {
 	Logger().Sugar().Error("1234")
 	Logger().Sugar().Error("1234")
 
-
 	Logger().Debug("1234")
 	Logger().Warn("1234")
 	Logger().Info("1234")

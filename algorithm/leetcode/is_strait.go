@@ -28,7 +28,7 @@ import "sort"
 func isStraight(nums []int) bool {
 	sort.Ints(nums)
 	zeroCount := 0 // 王牌的个数
-	for i := 0; i < len(nums);i++ {
+	for i := 0; i < len(nums); i++ {
 		if nums[i] == 0 {
 			zeroCount++
 		} else {
@@ -41,19 +41,19 @@ func isStraight(nums []int) bool {
 	}
 
 	if zeroCount == 0 {
-		if nums[4] - nums[0] == 4 {
+		if nums[4]-nums[0] == 4 {
 			return true
 		}
 	} else if zeroCount == 1 {
-		if nums[4] - nums[1] < 5 {
+		if nums[4]-nums[1] < 5 {
 			return true
 		}
 	} else if zeroCount == 2 {
-		if nums[4] - nums[2] < 5 {
+		if nums[4]-nums[2] < 5 {
 			return true
 		}
 	} else if zeroCount == 3 {
-		if nums[4] - nums[3] < 5 {
+		if nums[4]-nums[3] < 5 {
 			return true
 		}
 	} else { // 4, 5

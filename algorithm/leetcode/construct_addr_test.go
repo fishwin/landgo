@@ -5,5 +5,5 @@ import (
 )
 
 func Test_constructArr(t *testing.T) {
-	t.Log(constructArr([]int{1,2,0,4,5}))
+	t.Log(constructArr([]int{1, 2, 0, 4, 5}))
 }

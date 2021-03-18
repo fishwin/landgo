@@ -16,9 +16,9 @@ package leetcode
 //
 //A.length == n + m
 
-func merge(A []int, m int, B []int, n int)  {
-	pa := m-1 // 指向A数组最后一个有效的元素
-	pb := n-1 // 指向B数组最后一个有效的元素
+func merge(A []int, m int, B []int, n int) {
+	pa := m - 1        // 指向A数组最后一个有效的元素
+	pb := n - 1        // 指向B数组最后一个有效的元素
 	pTail := n + m - 1 // 指向A数组最后一个元素
 
 	for pTail >= 0 {

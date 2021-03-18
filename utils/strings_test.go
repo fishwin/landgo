@@ -39,16 +39,16 @@ func TestSliceContainsString(t *testing.T) {
 		want bool
 	}{
 		{
-			name:"exist",
-			args:args{
+			name: "exist",
+			args: args{
 				slice: []string{"abc", "cba", "nba", "ppt", "world"},
 				item:  "world",
 			},
 			want: true,
 		},
 		{
-			name:"not exist",
-			args:args{
+			name: "not exist",
+			args: args{
 				slice: []string{"abc", "cba", "nba", "ppt", "world"},
 				item:  "word",
 			},

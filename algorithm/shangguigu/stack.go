@@ -6,16 +6,16 @@ import (
 )
 
 type Stack struct {
-	top int
-	core []int
+	top      int
+	core     []int
 	capacity int
 }
 
 func NewStack(capacity int) *Stack {
 	s := &Stack{
-		top: -1,
+		top:      -1,
 		capacity: capacity,
-		core: make([]int, capacity),
+		core:     make([]int, capacity),
 	}
 
 	return s
@@ -48,7 +48,7 @@ func (s *Stack) Top() (int, error) {
 }
 
 func (s *Stack) IsFull() bool {
-	return s.top == s.capacity - 1
+	return s.top == s.capacity-1
 }
 
 func (s *Stack) IsEmpty() bool {
@@ -56,10 +56,8 @@ func (s *Stack) IsEmpty() bool {
 }
 
 func (s *Stack) Print() {
-	for i := 0; i <= s.top ;i++ {
+	for i := 0; i <= s.top; i++ {
 		fmt.Printf("%v\t", s.core[i])
 	}
 	fmt.Println()
 }
-
-

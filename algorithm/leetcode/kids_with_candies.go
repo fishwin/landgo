@@ -22,7 +22,7 @@ package leetcode
 //
 //输入：candies = [12,1,12], extraCandies = 10
 //输出：[true,false,true]
-// 
+//
 //
 //提示：
 //
@@ -44,7 +44,7 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 
 	var ret []bool
 	for _, v := range candies {
-		if v + extraCandies >= max {
+		if v+extraCandies >= max {
 			ret = append(ret, true)
 		} else {
 			ret = append(ret, false)

@@ -318,15 +318,15 @@ func decrypt(code []int, k int) []int {
 		} else if k > 0 {
 			t = 1
 			for t <= k {
-				ret[i] += code[(i+t) % len(code)]
+				ret[i] += code[(i+t)%len(code)]
 				t++
 			}
 		} else {
 			t = -1
 			for t >= k {
-				p = i+t
+				p = i + t
 				if p < 0 {
-					p = len(code)+p
+					p = len(code) + p
 				}
 				ret[i] += code[p]
 				t--

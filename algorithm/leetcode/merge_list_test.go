@@ -19,7 +19,6 @@ func Test_mergeTwoLists(t *testing.T) {
 		Next: n12,
 	}
 
-
 	//n24 := &ListNode{
 	//	Val:  4,
 	//	Next: nil,

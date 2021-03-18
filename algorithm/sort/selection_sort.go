@@ -4,7 +4,7 @@ package sort
 func SelectionSort(src []int) []int {
 	length := len(src)
 
-	for i := 0; i < length - 1; i++ {
+	for i := 0; i < length-1; i++ {
 		min := i
 		for j := i + 1; j < length; j++ {
 			if src[j] < src[min] {

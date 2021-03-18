@@ -32,7 +32,7 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	index := 0
 	p0 := tempHead
 	for p0 != nil {
-		if index == m - 1 {
+		if index == m-1 {
 			break
 		}
 		index++

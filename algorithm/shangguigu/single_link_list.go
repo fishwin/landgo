@@ -77,7 +77,7 @@ func (s *SingleLinkList) AddAtIndex(index int, v int) error {
 	}
 
 	n := &Node{
-		Val:  v,
+		Val: v,
 	}
 
 	n.Next = p.Next
@@ -125,7 +125,7 @@ func (s *SingleLinkList) DeleteHead() error {
 }
 
 func (s *SingleLinkList) DeleteAtIndex(index int) error {
-	if index < 0 || index > s.length - 1 {
+	if index < 0 || index > s.length-1 {
 		return errors.New("index overflow")
 	}
 	if s.IsEmpty() {
@@ -135,7 +135,7 @@ func (s *SingleLinkList) DeleteAtIndex(index int) error {
 	if index == 0 {
 		s.DeleteHead()
 		return nil
-	} else if index == s.length - 1 {
+	} else if index == s.length-1 {
 		s.DeleteTail()
 		return nil
 	}
@@ -177,7 +177,7 @@ func (s *SingleLinkList) UpdateHead(v int) error {
 }
 
 func (s *SingleLinkList) UpdateAtIndex(index int, v int) error {
-	if index < 0 || index > s.length - 1 {
+	if index < 0 || index > s.length-1 {
 		return errors.New("index overflow")
 	}
 	if s.IsEmpty() {

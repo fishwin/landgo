@@ -48,7 +48,7 @@ func depth(root *TreeNode) int {
 	leftDepth := depth(root.Left) + 1
 	rightDepth := depth(root.Right) + 1
 
-	fmt.Println("test111"       )
+	fmt.Println("test111")
 
 	if leftDepth > rightDepth {
 		return leftDepth

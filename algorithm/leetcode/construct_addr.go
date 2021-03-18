@@ -31,7 +31,7 @@ func constructArr(a []int) []int {
 
 	if zeroCount == 0 { // 如果元素都非0,则直接乘积除以当前元素即为新元素值
 		for i := 0; i < len(a); i++ {
-			a[i] = temp/a[i]
+			a[i] = temp / a[i]
 		}
 	} else if zeroCount == 1 { // 如果有一个0元素,那么除0元素的新元素非0外,其余都是0
 		for i := 0; i < len(a); i++ {

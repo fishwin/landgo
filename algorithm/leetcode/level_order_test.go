@@ -10,26 +10,26 @@ func Test_levelOrder(t *testing.T) {
 		Left: &TreeNode{
 			Val: 2,
 			Left: &TreeNode{
-				Val: 3,
-				Left: nil,
+				Val:   3,
+				Left:  nil,
 				Right: nil,
 			},
 			Right: &TreeNode{
-				Val: 4,
-				Left: nil,
+				Val:   4,
+				Left:  nil,
 				Right: nil,
 			},
 		},
 		Right: &TreeNode{
 			Val: 5,
 			Left: &TreeNode{
-				Val: 6,
-				Left: nil,
+				Val:   6,
+				Left:  nil,
 				Right: nil,
 			},
 			Right: &TreeNode{
-				Val: 7,
-				Left: nil,
+				Val:   7,
+				Left:  nil,
 				Right: nil,
 			},
 		},

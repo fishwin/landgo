@@ -41,12 +41,11 @@ import "sort"
 //0 <= nums[i] <= n
 //nums 中的所有数字都 独一无二
 
-
 func missingNumber(nums []int) int {
 	sort.Ints(nums)
 	i := 0
-	for ; i < len(nums)-1;i++ {
-		if nums[i] + 1 != nums[i+1] {
+	for ; i < len(nums)-1; i++ {
+		if nums[i]+1 != nums[i+1] {
 			return nums[i] + 1
 		}
 	}
@@ -57,12 +56,11 @@ func missingNumber(nums []int) int {
 	return len(nums)
 }
 
-
 func hammingDistance(x int, y int) int {
-	temp :=  x ^ y
+	temp := x ^ y
 	n := 0
 	for temp != 0 {
-		if temp & 1 == 1 {
+		if temp&1 == 1 {
 			n++
 		}
 		temp >>= 1
@@ -73,7 +71,7 @@ func hammingDistance(x int, y int) int {
 func findDisappearedNumbers(nums []int) []int {
 	f := make([]bool, len(nums))
 
-	for i := 0; i < len(nums);i++ {
+	for i := 0; i < len(nums); i++ {
 		f[nums[i]-1] = true
 	}
 

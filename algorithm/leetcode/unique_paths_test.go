@@ -6,5 +6,5 @@ import (
 )
 
 func Test_uniquePaths(t *testing.T) {
-	fmt.Println(uniquePaths(7,3))
+	fmt.Println(uniquePaths(7, 3))
 }

@@ -32,7 +32,7 @@ func numWays(n int) int {
 	hn_1 := 2
 	var ret int
 	for i := 3; i <= n; i++ {
-		ret = (hn_1 + hn_2) % (1e9+7)
+		ret = (hn_1 + hn_2) % (1e9 + 7)
 		hn_2 = hn_1
 		hn_1 = ret
 	}

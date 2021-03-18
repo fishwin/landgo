@@ -13,10 +13,11 @@ type Queue struct {
 
 func NewQueue(length int) *Queue {
 	q := &Queue{
-		core: make([]int, length + 1),
+		core: make([]int, length+1),
 		head: 0,
 		tail: 0,
 	}
+	fmt.Println("test111"               )
 
 	return q
 }
@@ -54,11 +55,11 @@ func (q *Queue) Tail() (int, error) {
 		return -1, errors.New("queue is empty")
 	}
 
-	return q.core[(q.tail - 1) % len(q.core)], nil
+	return q.core[(q.tail-1)%len(q.core)], nil
 }
 
 func (q *Queue) IsFull() bool {
-	return (q.tail + 1) % len(q.core) == q.head
+	return (q.tail+1)%len(q.core) == q.head
 }
 
 func (q *Queue) IsEmpty() bool {
@@ -66,8 +67,8 @@ func (q *Queue) IsEmpty() bool {
 }
 
 func (q *Queue) Print() {
-	for i := q.head; i % len(q.core) != q.tail;i++ {
-		fmt.Printf("%v ", q.core[i % len(q.core)])
+	for i := q.head; i%len(q.core) != q.tail; i++ {
+		fmt.Printf("%v ", q.core[i%len(q.core)])
 	}
 	fmt.Println()
 }

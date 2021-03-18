@@ -1,5 +1,7 @@
 package shangguigu
 
+import "fmt"
+
 // 稀疏数组
 
 func SparseArrayCompress(src [][]int) [][3]int {
@@ -19,6 +21,8 @@ func SparseArrayCompress(src [][]int) [][3]int {
 		}
 	}
 
+	fmt.Println("test111     ")
+
 	return ret
 }
 
@@ -28,7 +32,7 @@ func SparseArrayDecompress(src [][3]int) [][]int {
 	}
 
 	ret := make([][]int, src[0][0])
-	for i := 0; i < len(ret);i++ {
+	for i := 0; i < len(ret); i++ {
 		ret[i] = make([]int, src[0][1])
 	}
 

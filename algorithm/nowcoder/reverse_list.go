@@ -1,5 +1,7 @@
 package nowcoder
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -17,6 +19,9 @@ func ReverseList(pHead *ListNode) *ListNode {
 	}
 
 	p, head, temp := pHead, pHead, pHead
+
+
+	fmt.Println("test")
 
 	// 第一个节点不动，不断的将其后的节点放到头部
 	for p.Next != nil {
